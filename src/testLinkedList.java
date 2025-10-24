@@ -3,5 +3,8 @@ public class testLinkedList {
         myLinkedList LL1 = new myLinkedList(5);
       LL1.prepend(6);
       LL1.printLinkedList();
+        System.out.println(LL1.removeFirst().value);
+        System.out.println();
+      LL1.printLinkedList();
     }
 }
