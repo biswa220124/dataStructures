@@ -116,18 +116,33 @@ public class myLinkedList {
         }
         return false;
     }
-    public boolean insert(int index, int value){
+
+    public boolean insert(int index, int value) {
         Node newNode = new Node(value);
-        if(index<0 || index>length) return false;
-        if(index==0) prepend(value);
-        if(index==length) append(value);
-        else{
-            Node temp = get(index-1);
+        if (index < 0 || index > length) return false;
+        if (index == 0) prepend(value);
+        if (index == length) append(value);
+        else {
+            Node temp = get(index - 1);
             newNode.next = temp.next;
             temp.next = newNode;
             length++;
         }
         return true;
+
+    }
+
+    public Node remove(int index) {
+        if (index < 0 || index >= length) return null;
+        if (index == 1) return removeFirst();
+        if (index == length - 1) return removeLast();
+        Node temp = get(index);
+        Node pre = get(index - 1);
+        pre.next = temp.next;
+        temp.next = null;
+        length--;
+        return temp;
+
 
     }
 }
