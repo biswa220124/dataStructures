@@ -9,5 +9,7 @@ public class doublyLinkedListTester {
         DLL.printDoublyLinkedList();
         DLL.removeLast();
         DLL.printDoublyLinkedList();
+        DLL.prepend(10);
+        DLL.printDoublyLinkedList();
     }
 }
