@@ -5,5 +5,7 @@ public class doublyLinkedListTester {
         DLL.getLength();
         DLL.getHead();
         DLL.getTail();
+        DLL.append(9);
+        DLL.printDoublyLinkedList();
     }
 }
