@@ -7,6 +7,9 @@ public class doublyLinkedListTester {
         DLL.append(16);
         DLL.printDoublyLinkedList();
         System.out.println();
-        System.out.println("Value is"+ DLL.get(3).value);
+        DLL.printDoublyLinkedList();
+        DLL.remove(1);
+        System.out.println();
+        DLL.printDoublyLinkedList();
     }
 }
