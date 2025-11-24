@@ -6,5 +6,8 @@ public class stackTest {
         myStack.getTop();
         myStack.pushValue(9);
         myStack.printStack();
+        myStack.pop();
+
+        myStack.printStack();
     }
 }

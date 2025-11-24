@@ -16,7 +16,7 @@ public class Stack {
     public void printStack(){
         Node temp = top;
         while(temp!=null){
-            System.out.print(temp.value);
+            System.out.println(temp.value);
             temp = temp.next;
         }
     }
@@ -35,5 +35,16 @@ public class Stack {
             top = newNode;
         }
         height++;
+    }
+    public Node pop(){
+        Node temp = top;
+        if(height==0) return null;
+        else{
+            top = top.next;
+            temp.next = null;
+            height--;
+        }
+        return temp;
+
     }
 }
