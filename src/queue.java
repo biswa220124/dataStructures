@@ -38,8 +38,22 @@ public class queue {
         } else {
             last.next = newNode;
             last = newNode;
-           
+
         }
         length++;
+    }
+    public Node dequeue(){
+        if(length==0) return null;
+        Node temp = first;
+        if(length==1){
+            first=null;
+            last=null;
+        }
+        else{
+            first = first.next;
+            temp.next=null;
+
+        }
+        return temp;
     }
 }
